@@ -4,7 +4,9 @@
 ## <서비스 완성 요구사항>
 
 1. 아래의 요구사항을 기반으로 Use Case 그리기
-    
+   
+   <img width="422" alt="스크린샷 2022-12-08 오후 1 55 39" src="https://user-images.githubusercontent.com/117059217/206360251-0c0bb7bd-0adb-461f-b3e6-c3781963e4a1.png">
+
     
 2. 전체 게시글 목록 조회 API
     - 제목, 작성자명, 작성 내용, 작성 날짜를 조회하기
