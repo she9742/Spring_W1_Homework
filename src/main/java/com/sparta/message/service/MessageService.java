@@ -17,7 +17,7 @@ public class MessageService {
     private final MessageRepository messageRepository;
 
 
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true) //db 수정 불가!
     public List<Message> getMessageAll() {
         return messageRepository.findAllByOrderByModifiedAtDesc();
     }
@@ -44,9 +44,10 @@ public class MessageService {
         if (!message.getPassword().equals(requestDto.getPassword())) {
             throw new IllegalArgumentException("잘못된 비밀번호입니다.");
         }
-        message.update(requestDto);
+        message.update(requestDto); //수정하는 부분
         return message.getContents();
     }
+
 
     public String deleteMessage(Long id, MessageRequestDto requestDto) {
         Message message = messageRepository.findById(id).orElseThrow(

@@ -26,12 +26,7 @@ public class Message extends Timestamped {
     @Column(nullable = false)
     private String contents;
 
-//    public Message(String username, String contents) {
-//        this.title = title;
-//        this.username = username;
-//        this.password = password;
-//        this.contents = contents;
-//    }
+
 
     public Message(MessageRequestDto requestDto) {
         this.title = requestDto.getTitle();

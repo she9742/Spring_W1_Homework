@@ -36,7 +36,7 @@ public class MessageController {
     @PutMapping("/api/messages/{id}") //수정
     public String updateMessage(@PathVariable Long id, @RequestBody MessageRequestDto requestDto) {
         return messageService.updateMessage(id, requestDto);
-    }
+    } //@requestboday 사용 -> requstdto에서 고객이 입력한 내용을 가져옴
 
     @DeleteMapping("/api/messages/{id}") //삭제
     public String deleteMessage(@PathVariable Long id, @RequestBody MessageRequestDto requestDto) {
